@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<!-- saved from url=(0075)file:///C:/Users/ESTHER/Desktop/New%20folder%20(3)/Elimu%20bora%20site.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elimu Bora </title>
+   <style>
+    /* --- Global Styles and Colorful Theme Setup --- */
+:root {
+    --primary-color: #007BFF; /* Bright Blue */
+    --secondary-color: #28A745; /* Vibrant Green */
+    --accent-color: #FFC107; /* Golden Yellow/Orange */
+    --background-light: #F8F9FA; /* Off-White/Light Gray */
+    --text-dark: #343A40; /* Dark Gray */
+    --font-family: 'Poppins', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--background-light);
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+h2, h3 {
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+/* --- Header & Navigation --- */
+header {
+    background: var(--primary-color);
+    color: white;
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo h1 {
+    font-size: 1.8em;
+    margin-bottom: 5px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    font-weight: 500;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+    border-radius: 4px;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+
+main {
+    padding: 30px 5%;
+}
+
+section {
+    padding: 40px 0;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), var(--primary-color), rgba(0, 0, 0, 0));
+    margin: 30px 0;
+}
+
+.statement-section h2 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.statement-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+.mission-box, .vision-box {
+    flex: 1;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.mission-box {
+    background-color: #E6F0FF; /* Light Blue */
+    border-left: 5px solid var(--primary-color);
+}
+
+.vision-box {
+    background-color: #E7F6EA; /* Light Green */
+    border-left: 5px solid var(--secondary-color);
+}
+
+.mission-box:hover, .vision-box:hover {
+    transform: translateY(-5px);
+}
+
+.mission-box h3, .vision-box h3 {
+    color: var(--primary-color);
+}
+
+.dean-signature {
+    text-align: right;
+    margin-top: 20px;
+    font-style: italic;
+    color: #6c757d;
+}
+
+.courses-section h2 {
+    color: var(--secondary-color);
+    text-align: center;
+}
+
+.course-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.course-category {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.course-category h3 {
+    color: var(--secondary-color);
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.course-category ul {
+    list-style: disc;
+    margin-left: 20px;
+}
+
+.course-title {
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.achievements-section h2 {
+    color: var(--accent-color);
+    text-align: center;
+}
+
+.achievement-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.achievement-card {
+    flex: 1;
+    background-color: #FFFBE6; /* Light Yellow */
+    border: 1px solid var(--accent-color);
+    padding: 25px;
+    border-radius: 8px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.achievement-card:hover {
+    background-color: var(--accent-color);
+    color: var(--text-dark);
+}
+
+.achievement-card h4 {
+    color: var(--text-dark);
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.gallery-section h2 {
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05); 
+}
+footer {
+    background: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 20px 5%;
+    font-size: 0.9em;
+    margin-top: 30px;
+}
+
+.address {
+    margin-top: 10px;
+    line-height: 1.8;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-in {
+   
+    animation: fadeIn 1s ease-out;
+}
+
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        margin-top: 15px;
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin: 0 10px;
+    }
+
+    .statement-container, .achievement-grid {
+        flex-direction: column;
+    }
+
+    .statement-section, .achievements-section {
+        padding: 20px 0;
+    }
+}
+   </style>
+    <link href="./Elimu Bora trial_files/css2" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>Elimu Bora </h1>
+            <p>Empowering the Educators of Tomorrow</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="file:///C:/Users/ESTHER/Desktop/New%20folder%20(3)/Elimu%20bora%20site.html#about">About</a></li>
+                <li><a href="file:///C:/Users/ESTHER/Desktop/New%20folder%20(3)/Elimu%20bora%20site.html#courses">Courses</a></li>
+                <li><a href="file:///C:/Users/ESTHER/Desktop/New%20folder%20(3)/Elimu%20bora%20site.html#achievements">Achievements</a></li>
+                <li><a href="file:///C:/Users/ESTHER/Desktop/New%20folder%20(3)/Elimu%20bora%20site.html#gallery">Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about" class="statement-section">
+            <h2 class="animate-in">Dean's Message: Our Guiding Principles</h2>
+            <div class="statement-container">
+                <div class="mission-box">
+                    <h3>Mission Statement</h3>
+                    <p>To prepare transformative educators and leaders through innovative research, rigorous academic programs, and dedicated community engagement, fostering a culture of lifelong learning and ethical practice.</p>
+                </div>
+                <div class="vision-box">
+                    <h3>Vision Statement</h3>
+                    <p>To be the leading School of Education in the region, recognized globally for producing highly skilled, socially responsible, and technologically adept professionals who shape the future of learning.</p>
+                </div>
+            </div>
+            <p class="dean-signature">- Prof. Manasseh Wafula, Dean, School of Education</p>
+        </section>
+
+        <hr>
+
+        <section id="courses" class="courses-section">
+            <h2 class="animate-in"> Academic Programs</h2>
+            <div class="course-list">
+                <div class="course-category">
+                    <h3>Undergraduate Programs</h3>
+                    <ul>
+                        <li><span class="course-title">Bachelor of Education (Arts)</span> - Specializations: History, Geography, Literature</li>
+                        <li><span class="course-title">Bachelor of Education (Science)</span> - Specializations: Physics, Chemistry, Biology, Math</li>
+                        <li><span class="course-title">Bachelor of Early Childhood Education</span></li>
+                    </ul>
+                </div>
+                <div class="course-category">
+                    <h3>Graduate Programs</h3>
+                    <ul>
+                        <li><span class="course-title">Master of Education (M.Ed)</span> - Focus: Educational Administration &amp; Planning</li>
+                        <li><span class="course-title">Master of Arts in Curriculum Studies</span></li>
+                        <li><span class="course-title">Doctor of Philosophy (Ph.D.) in Educational Psychology</span></li>
+                    </ul>
+                </div>
+                <div class="course-category">
+                    <h3>Diploma &amp; Certificate</h3>
+                    <ul>
+                        <li><span class="course-title">Diploma in Special Needs Education (SNE)</span></li>
+                        <li><span class="course-title">Certificate in Technology Integration for Teachers</span></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="achievements" class="achievements-section">
+            <h2 class="animate-in">School Achievements</h2>
+            <div class="achievement-grid">
+                <div class="achievement-card">
+                    <h4>Research Excellence</h4>
+                    <p>Awarded KSH 1.2 Million in research grants for 2024 focusing on digital literacy in remote schools.</p>
+                </div>
+                <div class="achievement-card">
+                    <h4>Top Graduates</h4>
+                    <p>Our graduates achieved a 98% job placement rate in recognized institutions within six months of graduation.</p>
+                </div>
+                <div class="achievement-card">
+                    <h4>Community Impact</h4>
+                    <p>Launched 5 successful Teacher Professional Development workshops reaching over 500 teachers nationally.</p>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="gallery" class="gallery-section">
+            <h2 class="animate-in">Gallery: Moments of Learning</h2>
+            <div class="photo-gallery">
+                <div class="gallery-item"><img src="./Elimu Bora trial_files/pic 1.jpg" alt="Classes"></div>
+                <div class="gallery-item"><img src="./Elimu Bora trial_files/pic 2.jpg" alt="Pavilion."></div>
+                <div class="gallery-item"><img src="./Elimu Bora trial_files/pic 3.jpg" alt="Academic Block."></div>
+                <div class="gallery-item"><img src="./Elimu Bora trial_files/pic 4.jpg" alt="School Field."></div>
+                <div class="gallery-item"><img src="./Elimu Bora trial_files/pic 5.jpg" alt="PA seminar."></div>
+                <div class="gallery-item"><img src="./Elimu Bora trial_files/pic 6.jpg" alt="Performing Artist."></div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2025 University School of Education. All Rights Reserved.</p>
+        <p class="address">
+            Main University Campus Address:<br>
+            P.O. Box 584 - 00100,Kutus<br>
+            Sticks Arena, Kenya. | Email: mannasehwafula@education.ac.ke | Phone: 0734728292
+        </p>
+    </footer>
+
+
+</body></html>
